@@ -2,12 +2,6 @@ const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const showtable = require('console.table');
 
-
-
-// const PORT = process.env.PORT || 3001;
-// const app = expres();
-
-
 const db = mysql.createConnection(
     {
         host: 'localhost',
@@ -242,7 +236,7 @@ function returnToMain() {
             if (answers.return === "Return to Main Menu") {
                 runProgram();
             } else {
-                exit;
+                db.end();
             }
         })
 }

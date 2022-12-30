@@ -15,7 +15,7 @@ VALUES  (1, "Paper Salesperson", 1, 49500),
         (6, "Receptionist", 5, 39000),
         (7, "Temp", 5, 32000),
         (8, "Assistant to the Regional Manager", 1, 49501),
-        (9, "Regional Manager", 7, 60000);
+        (9, "Regional Manager", 6, 60000);
 
 INSERT INTO employees (id, first_name, last_name, role_id, manager_id)
 VALUES  (1, "Jim", "Halpert", 1, 14),
@@ -25,10 +25,10 @@ VALUES  (1, "Jim", "Halpert", 1, 14),
         (5, "Phyllis", "Vance", 1, 14),
         (6, "Angela", "Martin", 2, 14),
         (7, "Oscar", "Martinez", 3, 6),
-        (8, "Kevin", "Malone", 1, 6),
-        (9, "Creed", "Bratton", 2, 14),
-        (10, "Meredeth", "Palmer", 2, 14),
-        (11, "Kelly", "Kapur", 2, 14),
+        (8, "Kevin", "Malone", 3, 6),
+        (9, "Creed", "Bratton", 4, 14),
+        (10, "Meredeth", "Palmer", 4, 14),
+        (11, "Kelly", "Kapur", 4, 14),
         (12, "Ryan", "Howard", 7, 14),
-        (13, "Toby", "Flenderson", 1, null),
+        (13, "Toby", "Flenderson", 5, null),
         (14, "Michael", "Scott", 9, null);
