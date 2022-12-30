@@ -11,4 +11,4 @@ The following shows the CLI apperance:
 ![This CLI allows a user to control the employee database.](/assets/ScreenShot1.png)![](/assets/ScreenShot2.png)
 
 ## Link
-This [link](https://drive.google.com/file/d/1RvJxeHGc46weMuoJ_1gup3UbrqdpjXGz/view) will take you to a video where you can see this CLI function properly. 
+This [link](https://youtu.be/9ceyP1R9KrY) will take you to a video where you can see this CLI function properly. 
