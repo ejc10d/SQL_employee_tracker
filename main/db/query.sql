@@ -1,3 +1,4 @@
+-- queries that allow us to access the db later in the code
 SELECT * FROM departmets;
 
 SELECT * FROM roles;

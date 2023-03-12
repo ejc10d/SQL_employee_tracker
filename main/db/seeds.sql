@@ -1,3 +1,4 @@
+-- fake info for a basic paper supply company based out of Scranton, PA. 
 INSERT INTO departments (name)
 VALUES  ("Sales"),
         ("Customer Service"),

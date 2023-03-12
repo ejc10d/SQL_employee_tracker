@@ -1,8 +1,11 @@
+-- creates a new version of the db 
 DROP DATABASE IF EXISTS employee_db;
 CREATE DATABASE employee_db;
 
+-- selecting the db
 USE employee_db;
 
+-- creates the tables for us to populate with seeded data
 CREATE TABLE departments (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30) NOT NULL,

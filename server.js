@@ -1,7 +1,9 @@
+// requiring sql and inquirer to run the cli
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const showtable = require('console.table');
 
+// creates connection to the sql database
 const db = mysql.createConnection(
     {
         host: 'localhost',
@@ -9,13 +11,13 @@ const db = mysql.createConnection(
         password: '',
         database: 'employee_db'
     });
-
+// error handling for the connection
 db.connect(function (error) {
     if (error) throw error;
     console.log(`Now connected to the employee database.`);
     runProgram();
 })
-
+// allows user to view all departments
 function viewDepartments() {
     const sql = "SELECT * FROM departments";
     db.query(sql, function (err, res) {
@@ -24,7 +26,7 @@ function viewDepartments() {
         returnToMain();
     });
 }
-
+// allows user to view all roles
 function viewRoles() {
     const sql = "SELECT * FROM roles";
     db.query(sql, function (err, res) {
@@ -33,7 +35,7 @@ function viewRoles() {
         returnToMain();
     });
 }
-
+// allows user to view all employees in a table
 function viewEmployees() {
     const sql = "SELECT employees.id, employees.first_name, employees.last_name, roles.title AS job_title, departments.name AS department, roles.salary AS salary, employees.manager_id AS manager FROM employees JOIN roles ON employees.role_id = roles.id JOIN departments ON roles.department_id = departments.id;"
     db.query(sql, function (err, res) {
@@ -42,7 +44,7 @@ function viewEmployees() {
         returnToMain();
     });
 }
-
+// adds a new dept to the database
 const addNewDept = () => {
         inquirer
             .prompt([
@@ -64,7 +66,7 @@ const addNewDept = () => {
                 viewDepartments();
             });
     };
-
+// adds a new role to the database
 const addNewRole = () => {
     db.query('SELECT * FROM departments', (err, departments) => {
         if (err) console.log(err);
@@ -108,7 +110,7 @@ const addNewRole = () => {
             });
     });
 };
-
+// adds a new employee to the db
 const addNewEmployee = () => {
     db.query('SELECT * FROM roles', (err, roles) => {
         if (err) console.log(err);
@@ -159,7 +161,7 @@ const addNewEmployee = () => {
             });
     });
 };
-
+// updates the role of a current employee in the database
 const updateRoleInDb = () => {
     db.query('SELECT * FROM employees', (err, employees) => {
         if (err) console.log(err);
@@ -212,7 +214,7 @@ const updateRoleInDb = () => {
     });
 };
 
-
+// sets all string names to a const to use later
 const viewAllDepts = 'View All Departments'
 const viewAllRoles = 'View all roles'
 const viewAllEmplys = 'View all employees'
@@ -222,6 +224,7 @@ const addEmployee = 'Add an employee'
 const updateRole = 'Update an employee role'
 const exit = 'Exit'
 
+// function for the menu to get the user back to the main menu
 function returnToMain() {
     inquirer
         .prompt([
@@ -242,7 +245,7 @@ function returnToMain() {
 }
 
 
-
+// runs the inital program and handles all paths the user might choose
 function runProgram() {
     inquirer
         .prompt([

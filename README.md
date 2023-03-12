@@ -1,4 +1,4 @@
-# Challenge_12
+# Employee Tracker Database (SQL)
 
 ## Description
 This application is a command line interface (CLI) that combines inquirer, SQL, and node all into one project. Upon running the user will be presented with a menu where they can make a selection. Each selection that is made with either show the requested data or prompt the user for more input. The idea of this project is that it is set up to be an employee database. I used the characters from the show The Office as my seed data. 
@@ -8,7 +8,8 @@ To run this application you  must have all the code. Then open the command line 
 
 ## Screen Shots
 The following shows the CLI apperance: 
-![This CLI allows a user to control the employee database.](/assets/ScreenShot1.png)![](/assets/ScreenShot2.png)
+This CLI allows a user to control the employee database.
+![](/assets/ScreenShot1.png)![](/assets/ScreenShot2.png)
 
 ## Link
 This [link](https://youtu.be/9ceyP1R9KrY) will take you to a video where you can see this CLI function properly. 
